@@ -74,7 +74,7 @@
             <h2>O que é o IIS?</h2>
             <p>O IIS (Internet Information Services) é um servidor web criado pela Microsoft. </p>
             <p>
-              Um servidor web é responsável por receber e enviar pedidos HTTP de clientes (normalmente browsers) além de manter aplicações centralizadas com acessos de diferentes localizações.
+              Um servidor web é responsável por receber e enviar pedidos  <a href="#http">HTTP</a> de clientes (normalmente browsers) além de manter aplicações centralizadas com acessos de diferentes localizações.
             </p>
             <a href="#iisSteps" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
@@ -90,7 +90,7 @@
           <div class="col-lg-8 mx-auto">
             <h2>O que acontece com uma requisição feita para um site gerenciado pelo IIS?</h2>
             <p>
-            1.	O browser inicia uma requisição HTTP para o servidor web e o <a href="#httpSys">HTTP.sys</a> intercepta essa requisição.
+            1.	O browser inicia uma requisição  <a href="#http">HTTP</a>  para o servidor web e o <a href="#httpSys">HTTP.sys</a> intercepta essa requisição.
             <br/>
             2.	O <a href="#httpSys">HTTP.sys</a> consulta o <a href="#was">WAS</a> para obter as informações de configuração.
             <br/>
@@ -108,7 +108,7 @@
 
             </p>
             <p>
-              Um servidor web é responsável por receber e enviar pedidos HTTP de clientes (normalmente browsers) além de manter aplicações centralizadas com acessos de diferentes localizações.
+              Um servidor web é responsável por receber e enviar pedidos  <a href="#http">HTTP</a>  de clientes (normalmente browsers) além de manter aplicações centralizadas com acessos de diferentes localizações.
             </p>
             <a href="#howWorksImage" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
@@ -118,6 +118,7 @@
       </div>
     </section>
 
+   
     <section id="howWorksImage" class="content-section text-center">
       <div class="container">
         <div class="row">
@@ -126,10 +127,51 @@
            
             <div class=" mr-auto">
             <img class="img-fluid" src="img/howWorks.png" alt="">
-             <a href="#httpSys" class="btn btn-circle js-scroll-trigger">
+             <a href="#http" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	 <section id="http" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+               <h2>O que é o HTTP/HTTPS?</h2>
+           <p>
+		   O protocolo HTTP é baseado em requisições e respostas entre clientes e servidores. O cliente — navegador ou dispositivo que fará a requisição; também é conhecido como user agent — solicita um determinado recurso (resource), enviando um pacote de informações contendo alguns cabeçalhos (headers) a um URI ou, mais especificamente, URL. O servidor recebe estas informações e envia uma resposta, que pode ser um recurso ou um simplesmente um outro cabeçalho.
+
+		  </p>
+          
+             <a href="#https" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+	 <section id="https" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+               <h2>O que é o HTTPS?</h2>
+           
+		   <p>
+		   O HTTPS (Hyper Text Transfer Protocol Secure - protocolo de transferência de hipertexto seguro) é uma implementação do protocolo HTTP sobre uma camada adicional de segurança que utiliza o protocolo SSL/TLS.
+			Essa camada adicional permite que os dados sejam transmitidos por meio de uma conexão criptografada e que se verifique a autenticidade do servidor e do cliente por meio de certificados digitais. A porta TCP usada por norma para o protocolo HTTPS é a 443.
+			Tudo na mensagem HTTPS é criptografado, incluindo os cabeçalhos, as requisições e respostas
+			Configuração do Servidor
+			Para preparar uma página web de modo a aceitar conexões HTTPS, o administrador deve criar um certificado de chave pública para o servidor web. Esse certificado deve ser assinado por uma autoridade de certificação confiável para que o navegador aceite a conexão e não exiba avisos. A autoridade certifica que o proprietário do certificado é o operador do servidor web que o apresenta. Uma lista de autoridades de certificação de assinatura é geralmente distribuída aos navegadores web para que eles possam verificar certificados assinados por elas.
+		   </p>
+          
+             <a href="#httpSys" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+        
           </div>
         </div>
       </div>
@@ -146,7 +188,7 @@
              <br/>
               Todo protocol listener recebe um requisição de protocolo especifica, envia ele para o IIS para processamento e então retorna a resposta para quem fez a requisição. 
               <br/>
-              Qualquer requisição do client para o servidor vai bater no <a href="#httpSys">HTTP.sys</a> primeiro.
+              Qualquer requisição do client para o servidor vai passar pelo HTTP.sys primeiro.
 
             </p>
             <a href="#wwwService" class="btn btn-circle js-scroll-trigger">
@@ -161,7 +203,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>O que é o WWW service? WWW Service (World Wide Web Publishing Service)</h2>
+            <h2>O que é o WWW service? (World Wide Web Publishing Service)</h2>
             
             <p>
             •	Responsável por gerenciar processos: <br/>
@@ -272,7 +314,7 @@
               <li class="list-inline-item">
                 <a href="#page-top" class="btn btn-default btn-lg ">
                   <i class=" fa-fw"></i>
-                  <span class="network-name">VOLTAR</span>
+                  <span class="network-name js-scroll-trigger">VOLTAR</span>
                 </a>
               </li>
               
