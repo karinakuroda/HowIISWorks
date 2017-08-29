@@ -96,11 +96,11 @@
             <br/>
             3.	O <a href="#was">WAS</a> consulta informações de configurações no applicationHost.config.
             <br/>
-            4.	O <a href="#wwwService">WWW service</a> recebe as informações de configuração como application pool
+            4.	O <a href="#wwwService">WWW service</a> recebe as informações de configuração como por exemplo, o <a href="#applicationPool">application pool</a>.
             <br/>
             5.	O <a href="#wwwService">WWW service</a> usa as informações de configurações para configurar o <a href="#httpSys">HTTP.sys</a>.
             <br/>
-            6.	O <a href="#was">WAS</a> inicia um <a href="#workerProcess">worker process</a>  para o application pool que foi feita a requisição.
+            6.	O <a href="#was">WAS</a> inicia um <a href="#workerProcess">worker process</a>  para o <a href="#applicationPool">application pool</a> que foi feita a requisição.
             <br/>
             7.	O <a href="#workerProcess">worker process</a> processa a requisição e retorna a resposta para o <a href="#httpSys">HTTP.sys</a>.
             <br/>
@@ -188,7 +188,7 @@
             <p>
               Ele é um protocol listener (ouvinte de protocolo).
              <br/>
-              Todo protocol listener recebe um requisição de protocolo especifica, envia ele para o IIS para processamento e então retorna a resposta para quem fez a requisição. 
+              Todo protocol listener recebe um requisição de protocolo especíica, envia ele para o IIS para processamento e então retorna a resposta para quem fez a requisição. 
               <br/>
               Qualquer requisição do client para o servidor vai passar pelo HTTP.sys primeiro.
 
@@ -209,7 +209,7 @@
             
             <p>
             •	Responsável por gerenciar processos: <br/>
-            Gerencia o application pool e o <a href="#workerProcess">worker process</a>. Ele controla o início, pausa, recycle de um processo, além de monitorar e detectar falhas nos processos.
+            Gerencia o <a href="#applicationPool">application pool</a> e o <a href="#workerProcess">worker process</a>. Ele controla o início, pausa e recycle de um processo, além de monitorar e detectar falhas nos processos.
             <br/><br/>
             •	Monitoria de performance: <br/>
             Monitora a performance e oferece informações como o performance conter para os sites e o cache do IIS.
@@ -218,6 +218,28 @@
             Le as informações configuração e usa para configurar e atualizar o HTTP listener (HTTP.sys) 
 
             </p>
+            <a href="#applicationPool" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	
+	
+	
+    <section id="applicationPool" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>O que é o Application Pool?</h2>
+            
+            <p>
+				Um pool de aplicativos é um grupo de um ou mais URLs que são atendidos por um processo de trabalho ou um conjunto de processos de trabalho. Os pools de aplicativos estabelecem limites para os aplicativos que eles contêm, o que significa que qualquer aplicativo que está executando fora de um determinado conjunto de aplicativos não pode afetar os aplicativos no pool de aplicativos.
+            </p>
+			<br/>
+			<p>No mundo real, se você colocar mais de um aplicativo no mesmo pool e qualquer um deles apresentar problemas, todos os aplicativos que estão neste mesmo pool vão cair.</p>
             <a href="#listenerAdapter" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
@@ -254,7 +276,7 @@
             <p>
              Usado Para expandir os usos de protocolos além do HTTP e HTTPS
             <br/>
-            Gerencia o application pool  e o worker process tanto para requisições http e não http.
+            Gerencia o <a href="#applicationPool">application pool</a> e o  <a href="#workerProcess">worker process</a> tanto para requisições http e não http.
             <br/>
              Logo no startup, o was lê as informações do arquivo ApplicationHost.config e passa as informações para os listeners adapter que estão no servidor.
              <br/>
